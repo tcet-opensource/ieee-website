@@ -1,4 +1,4 @@
-# [ieee-website](https://ieee-tcet.github.io/ieee-website/)
+# ieee-website
 Website of TCET IEEE Student's chapter
 
 ## Preview
