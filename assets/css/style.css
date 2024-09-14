@@ -1413,12 +1413,18 @@ section {
   color: #03045e;
   
 }
-
+.bento-item h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #03045e;
+  
+}
 .bento-item p {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   color: #666;
-  
+  padding-bottom: 0%;
 }
 
 /* .bento-item:nth-child(1) {
