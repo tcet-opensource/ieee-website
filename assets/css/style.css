@@ -1209,6 +1209,7 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
 #footer {
   background: black;
   padding: 0 0 30px 0;
@@ -1226,16 +1227,13 @@ section {
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-info h3 {
+#footer .footer-top .footer-info h4 {
   font-size: 28px;
   margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
+  padding: 2px 0;
+  line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-#footer .footer-top .footer-info h3 span {
   color: #ed3c0d;
 }
 
@@ -1268,88 +1266,90 @@ section {
   text-decoration: none;
 }
 
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: 600;
+/* Contact Form Section */
+#footer .footer-top form {
+  background: #151515; /* Matches the footer background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.1); /* Soft highlight */
+  border: 1px solid #ed3c0d; /* Highlight the box */
+}
+
+#footer .footer-top form input[type="text"],
+#footer .footer-top form input[type="email"],
+#footer .footer-top form textarea {
+  background: #333; /* Darker background to blend with footer */
   color: #fff;
-  position: relative;
-  padding-bottom: 12px;
+  border: 2px solid #ed3c0d; /* Red highlight for form inputs */
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
 }
 
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
+#footer .footer-top form input[type="text"]:focus,
+#footer .footer-top form input[type="email"]:focus,
+#footer .footer-top form textarea:focus {
+  border-color: #fd8989; /* Lighter red on focus */
+  outline: none;
 }
 
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+#footer .footer-top form textarea {
+  resize: none;
 }
 
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #ed3c0d;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
+#footer .footer-top form button[type="submit"] {
+  background: #ed3c0d;
   color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-#footer .footer-top .footer-links ul a:hover {
-  color: #ed3c0d;
+#footer .footer-top form button[type="submit"]:hover {
+  background: #fd8989;
 }
 
+/* Newsletter Section */
 #footer .footer-top .footer-newsletter form {
   margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
+  background: #151515;
+  padding: 10px;
+  border: 1px solid #ed3c0d;
+  border-radius: 8px;
 }
 
 #footer .footer-top .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
+  background: #333;
+  color: #fff;
+  border: 2px solid #ed3c0d;
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 120px);
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: -2px;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
   background: #ed3c0d;
-  color: #ffffff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
   background: #fd8989;
 }
 
+/* Footer Bottom Section */
 #footer .copyright {
   text-align: center;
   padding-top: 30px;
+  color: #fff;
 }
 
 #footer .credits {
@@ -1358,6 +1358,7 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
 
 /* Start of Bento CSS */
 /* section {
