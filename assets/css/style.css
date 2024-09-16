@@ -1,3 +1,4 @@
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -642,63 +643,6 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  border: 1px solid #ebebeb;
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
-}
-
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: #ed3c0d;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
-}
-
-.services .icon-box .icon i {
-  color: #151515;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-.services .icon-box h4 a {
-  color: #151515;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box h4 a:hover {
-  color: #ed3c0d;
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  transform: translateY(-10px);
 }
 
 /*--------------------------------------------------------------
@@ -1417,6 +1361,7 @@ section {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 700;
+  letter-spacing: 1;
   color: #03045e;
   
 }
@@ -1424,7 +1369,7 @@ section {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   color: #666;
-  padding-bottom: 0%;
+  
 }
 
 /* .bento-item:nth-child(1) {
@@ -1459,3 +1404,153 @@ section {
   justify-content: center;
 } */
 /* End of Bento CSS */
+#services .wrapper {
+    padding: 0 5%; /* Adjust padding to fit the full width */
+}
+
+#services #card-area {
+    padding: 50px 0;
+}
+
+#services .slider-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#services .slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+#services .cards-wrapper {
+    display: flex; /* Already set */
+    flex-direction: row;  /* Add this line */
+    justify-content: space-between; /* Add this line (optional) */
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+#services .card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    min-width: 25%; /* Ensure 3 cards are visible */
+    height: 400px;
+    background: transparent;
+    margin: 0 5px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#services .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the card */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+#services .card .overlay {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    z-index: 2;
+}
+
+#services .card .overlay h3 {
+  color: #ddd;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    background: transparent;
+    border: #007bff;
+}
+
+#services .card .overlay p {
+  color: #c2c2c2;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px; /* Add padding around the text */
+    word-wrap: break-word; /* Break long words to avoid overflow */
+    overflow-wrap: break-word; /* Ensure long text breaks properly */
+    margin: 0; /* Remove extra margins that may cause content overflow */
+    white-space: normal; /* Ensure the text wraps within the container */
+}
+
+#services .card .overlay a {
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+#services .card:hover img {
+    transform: scale(1.1);
+}
+
+#services .card:hover .overlay {
+    height: 100%;
+}
+
+#services .nav-btn {
+    background: transparent; /* No background color for minimalist look */
+    border: 2px solid #007bff; /* Border to define the button */
+    color: #007bff; /* Button color matching the border */
+    border-radius: 50%; /* Round button shape */
+    padding: 8px; /* Adjust size of the button */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size */
+    width: 40px; /* Fixed width and height for consistency */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: none; /* Remove shadow for minimalist design */
+    z-index: 10; /* Ensure the button appears above other elements */
+}
+
+#services .nav-btn:hover {
+    background: #007bff; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+    border-color: #007bff; /* Border color on hover */
+}
+
+#services #prevBtn {
+    left: 10px; /* Adjust as needed */
+}
+
+#services #nextBtn {
+    right: 10px; /* Adjust as needed */
+}
+#services .slider .card:nth-child(4) {
+  display: none;
+}
