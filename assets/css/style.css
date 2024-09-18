@@ -541,6 +541,7 @@ section {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #151515;
+  
 }
 
 /*--------------------------------------------------------------
@@ -1404,6 +1405,8 @@ section {
   justify-content: center;
 } */
 /* End of Bento CSS */
+
+
 #services .wrapper {
     padding: 0 5%; /* Adjust padding to fit the full width */
 }
@@ -1553,4 +1556,35 @@ section {
 }
 #services .slider .card:nth-child(4) {
   display: none;
+}
+#services .section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 80px;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+#services .section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #ffde9e;
+  margin: 4px 10px;
+}
+
+#services .section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #151515;
+  padding-left: 80px;
 }
