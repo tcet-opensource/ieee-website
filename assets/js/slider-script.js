@@ -4,18 +4,16 @@ const nextBtn = document.getElementById('nextBtn');
 
 let currentSlide = 0;
 const visibleCards = 3; // Number of cards visible at once
-let clickCount = 0; // Counter for next button clicks
-
 let isDragging = false;
 let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let animationID = 0;
 
-// Update the state of the navigation buttons
+// Update the state of the navigation buttons (Always enabled for infinite loop)
 function updateNavButtons() {
-  prevBtn.disabled = false; // Always enabled now since we loop
-  nextBtn.disabled = false; // Always enabled now since we loop
+  prevBtn.disabled = false;
+  nextBtn.disabled = false;
 }
 
 // Move the slider left or right
@@ -25,29 +23,25 @@ function moveSlider() {
   updateNavButtons();
 }
 
+// Previous button functionality
 prevBtn.addEventListener('click', () => {
   currentSlide--;
   if (currentSlide < 0) {
-    currentSlide = totalSlides - visibleCards; // Loop back to the last set
+    currentSlide = totalSlides - visibleCards; // Loop back to the last set of slides
   }
   moveSlider();
 });
 
+// Next button functionality
 nextBtn.addEventListener('click', () => {
-  clickCount++;
   currentSlide++;
-  
-  if (clickCount >= 5) {
-    currentSlide = 0; // Return to original position
-    clickCount = 0; // Reset the click counter
-  } else if (currentSlide > totalSlides - visibleCards) {
+  if (currentSlide > totalSlides - visibleCards) {
     currentSlide = 0; // Loop back to the first card
   }
-  
   moveSlider();
 });
 
- // --- Drag functionality ---
+// --- Drag functionality ---
 
 // Set the position based on the event type (mouse or touch)
 function getPositionX(event) {
@@ -85,11 +79,12 @@ function touchEnd() {
     currentSlide--;
   }
 
+  // Looping functionality
   if (currentSlide < 0) {
-    currentSlide = totalSlides - visibleCards; // Loop back to last
+    currentSlide = totalSlides - visibleCards; // Loop back to the last set of slides
   }
   if (currentSlide > totalSlides - visibleCards) {
-    currentSlide = 0; // Loop back to first
+    currentSlide = 0; // Loop back to the first card
   }
 
   moveSlider();

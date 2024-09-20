@@ -1660,48 +1660,129 @@ section {
 }
 
 /* Mobile view */
+/* Mobile view for 2 cards */
+/* Mobile view for 2 cards */
 @media (max-width: 768px) {
   #services .cards-wrapper {
     justify-content: flex-start;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
   }
 
   #services .card {
-    min-width: 90%; /* Show 1 card at a time on mobile */
-    height: 20rem; /* Further adjust height */
-    margin: 0 auto; /* Center the card */
+    min-width: 48%; /* Two cards side by side, each taking ~48% width */
+    height: auto; /* Let the card adapt its height */
+    max-height: 25rem; /* Limit card height if necessary */
+    margin: 0 1%; /* Add a margin between cards */
+    overflow: hidden; /* Prevent content overflow */
+  }
+
+  #services .card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.625rem;
+    display: block;
+    transition: transform 0.5s;
+  }
+
+  #services .card .overlay {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 0.625rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+    transition: height 0.5s;
+    z-index: 2;
+  }
+
+  #services .card .overlay h3 {
+    color: #ddd;
+    font-weight: 500;
+    margin-bottom: 0.313rem;
+    margin-top: 50%; /* Reduced margin for smaller screens */
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem; /* Slightly reduced font size */
+    letter-spacing: 0.125rem;
+  }
+
+  #services .card .overlay p {
+    color: #c2c2c2;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.625rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+    white-space: normal;
+  }
+
+  #services .card .overlay a {
+    margin-top: 0.625rem;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 3.125rem;
+    text-align: center;
+    padding: 0.313rem 0.938rem;
+  }
+
+  #services .card:hover .overlay {
+    height: 100%;
   }
 
   #services .section-title p {
-    padding-left: 1rem; /* Reduce padding on mobile */
-    font-size: 1.5rem; /* Further reduce font size */
+    padding-left: 1rem;
+    font-size: 1.5rem;
   }
 
   #services .nav-btn {
     width: 2rem;
     height: 2rem;
-    font-size: 0.875rem; /* Reduce button size for mobile */
+    font-size: 0.875rem;
   }
 
   #services #prevBtn, #services #nextBtn {
-    top: 40%; /* Adjust position for smaller screens */
+    top: 40%;
   }
 }
 
-/* Very small screens */
+/* Very small screens for 2 cards */
 @media (max-width: 480px) {
   #services .card {
-    min-width: 95%; /* Slightly reduce card width */
-    height: 18rem; /* Adjust card height for small screens */
+    min-width: 48%; /* Two cards side by side */
+    height: auto;
+    max-height: 22rem; /* Slightly reduce height on very small screens */
+    margin: 0 1%; /* Maintain space between cards */
+  }
+
+  #services .card img {
+    height: auto;
+    max-height: 12rem; /* Ensure the image is responsive */
+  }
+
+  #services .card .overlay h3 {
+    font-size: 1.25rem; /* Slightly smaller heading */
+    margin-top: 40%;
   }
 
   #services .section-title p {
-    font-size: 1.25rem; /* Smaller title font size for very small screens */
-    padding-left: 0.5rem; /* Further reduce padding */
+    font-size: 1.25rem;
+    padding-left: 0.5rem;
   }
 
   #services .nav-btn {
     width: 1.75rem;
     height: 1.75rem;
-    font-size: 0.75rem; /* Smaller buttons */
+    font-size: 0.75rem;
   }
 }
