@@ -1462,11 +1462,11 @@ section {
 /* End of Bento CSS */
 
 #services .wrapper {
-  padding: 0 5%; /* Adjust padding to fit the full width */
+  padding: 0 5%; /* Already responsive */
 }
 
 #services #card-area {
-  padding: 3.125rem 0;
+  padding: 3.125rem 0; /* Retain as is */
 }
 
 #services .slider-container {
@@ -1483,9 +1483,9 @@ section {
 }
 
 #services .cards-wrapper {
-  display: flex; /* Already set */
-  flex-direction: row; /* Add this line */
-  justify-content: space-between; /* Add this line (optional) */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   transition: transform 0.3s ease-in-out;
   width: 100%;
 }
@@ -1495,7 +1495,7 @@ section {
   overflow: hidden;
   box-shadow: 0.313rem 0.313rem 0.938rem rgba(0, 0, 0, 0.9);
   border-radius: 0.625rem;
-  min-width: 25%; /* Ensure 3 cards are visible */
+  min-width: 25%; /* Ensure 4 cards are visible on large screens */
   height: 25rem;
   background: transparent;
   margin: 0 0.313rem;
@@ -1505,11 +1505,10 @@ section {
 
 #services .card img {
   width: 100%;
-  height: 100%; /* Ensure image covers the card */
+  height: 100%;
   border-radius: 0.625rem;
   display: block;
   transition: transform 0.5s;
-  position:relative;
 }
 
 #services .card .overlay {
@@ -1540,19 +1539,17 @@ section {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.875rem;
   letter-spacing: 0.125rem;
-  background: transparent;
-  border: #007bff;
 }
 
 #services .card .overlay p {
   color: #c2c2c2;
   font-size: 0.875rem;
   line-height: 1.5;
-  padding: 0.625rem; /* Add padding around the text */
-  word-wrap: break-word; /* Break long words to avoid overflow */
-  overflow-wrap: break-word; /* Ensure long text breaks properly */
-  margin: 0; /* Remove extra margins that may cause content overflow */
-  white-space: normal; /* Ensure the text wraps within the container */
+  padding: 0.625rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  white-space: normal;
 }
 
 #services .card .overlay a {
@@ -1575,42 +1572,43 @@ section {
 }
 
 #services .nav-btn {
-  background: transparent; /* No background color for minimalist look */
-  border: 0.125rem solid #007bff; /* Border to define the button */
-  color: #007bff; /* Button color matching the border */
-  border-radius: 50%; /* Round button shape */
-  padding: 0.5rem; /* Adjust size of the button */
+  background: transparent;
+  border: 0.125rem solid #007bff;
+  color: #007bff;
+  border-radius: 50%;
+  padding: 0.5rem;
   cursor: pointer;
-  font-size: 1rem; /* Adjust font size */
-  width: 2.5rem; /* Fixed width and height for consistency */
+  font-size: 1rem;
+  width: 2.5rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  box-shadow: none; /* Remove shadow for minimalist design */
-  z-index: 10; /* Ensure the button appears above other elements */
+  z-index: 10;
 }
 
 #services .nav-btn:hover {
-  background: #007bff; /* Background color on hover */
-  color: #fff; /* Text color on hover */
-  border-color: #007bff; /* Border color on hover */
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
 }
 
 #services #prevBtn {
-  left: 0.625rem; /* Adjust as needed */
+  left: 0.625rem;
 }
 
 #services #nextBtn {
-  right: 0.625rem; /* Adjust as needed */
+  right: 0.625rem;
 }
+
 #services .slider .card:nth-child(4) {
   display: none;
 }
+
 #services .section-title h2 {
   font-size: 0.875rem;
   font-weight: 500;
@@ -1634,11 +1632,76 @@ section {
 
 #services .section-title p {
   margin: 0;
-  margin: 0;
   font-size: 2.25rem;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #151515;
   padding-left: 5rem;
+}
+
+/* Responsive Styles */
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  #services .cards-wrapper {
+    justify-content: space-around;
+  }
+
+  #services .card {
+    min-width: 45%; /* Show 2 cards at a time on tablet */
+    height: 22rem; /* Adjust card height */
+  }
+
+  #services .section-title p {
+    padding-left: 2rem; /* Adjust padding for smaller screens */
+    font-size: 1.75rem; /* Reduce title font size */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  #services .cards-wrapper {
+    justify-content: flex-start;
+  }
+
+  #services .card {
+    min-width: 90%; /* Show 1 card at a time on mobile */
+    height: 20rem; /* Further adjust height */
+    margin: 0 auto; /* Center the card */
+  }
+
+  #services .section-title p {
+    padding-left: 1rem; /* Reduce padding on mobile */
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  #services .nav-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.875rem; /* Reduce button size for mobile */
+  }
+
+  #services #prevBtn, #services #nextBtn {
+    top: 40%; /* Adjust position for smaller screens */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  #services .card {
+    min-width: 95%; /* Slightly reduce card width */
+    height: 18rem; /* Adjust card height for small screens */
+  }
+
+  #services .section-title p {
+    font-size: 1.25rem; /* Smaller title font size for very small screens */
+    padding-left: 0.5rem; /* Further reduce padding */
+  }
+
+  #services .nav-btn {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem; /* Smaller buttons */
+  }
 }
