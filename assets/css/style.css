@@ -4,18 +4,18 @@
 .centre {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 1.25rem;
   position: relative;
   left: 25%;
 }
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .centre {
     display: flex;
     flex-direction: column;
     left: 0;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .centre {
     left: 0;
   }
@@ -51,12 +51,12 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
+  right: 0.938rem;
+  bottom: 0.938rem;
   z-index: 996;
   background: #ed3c0d;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 4px;
   transition: all 0.4s;
 }
@@ -97,14 +97,14 @@ h6 {
 #preloader:before {
   content: "";
   position: fixed;
-  top: calc(50% - 0px);
-  left: calc(50% - 30px);
+  top: calc(50% - 0rem);
+  left: calc(50% - 1.875rem);
   border: 6px solid #ed3c0d;
   border-top-color: #151515;
   border-bottom-color: #151515;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   animation: animate-preloader 1s linear infinite;
 }
 
@@ -121,7 +121,7 @@ h6 {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -133,7 +133,7 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 0.938rem 0;
 }
 
 #header.header-scrolled,
@@ -142,12 +142,12 @@ h6 {
 }
 
 #header .logo {
-  font-size: 32px;
+  font-size: 2;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.063rem;
   text-transform: uppercase;
 }
 
@@ -160,7 +160,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 50px;
+  max-height: 3.125rem;
 }
 
 /*--------------------------------------------------------------
@@ -168,13 +168,13 @@ h6 {
 --------------------------------------------------------------*/
 .get-started-btn {
   color: #fff;
-  border-radius: 4px;
-  padding: 7px 25px 8px 25px;
+  border-radius: 0.25rem;
+  padding: 0.438rem 1.563rem 0.5rem 1.563rem;
   white-space: nowrap;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 0.875rem;
   display: inline-block;
-  border: 2px solid #ed3c0d;
+  border: 0.125rem solid #ed3c0d;
 }
 
 .get-started-btn:hover {
@@ -184,8 +184,8 @@ h6 {
 
 @media (max-width: 992px) {
   .get-started-btn {
-    padding: 7px 20px 8px 20px;
-    margin-right: 15px;
+    padding: 0.438rem 1.25rem 0.5rem 1.25rem;
+    margin-right: 0.938rem;
   }
 }
 
@@ -216,8 +216,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
-  font-size: 15px;
+  padding: 0.625rem 0 0.625rem 1.875rem;
+  font-size: 0.938rem;
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
@@ -226,9 +226,9 @@ h6 {
 
 .navbar a i,
 .navbar a:focus i {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 0;
-  margin-left: 5px;
+  margin-left: 0.313rem;
 }
 
 .navbar a:hover,
@@ -241,32 +241,32 @@ h6 {
 .navbar .dropdown ul {
   display: block;
   position: absolute;
-  left: 14px;
+  left: 0.875rem;
   top: calc(100% + 30px);
   margin: 0;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0rem 0rem 1.875rem rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
 
 .navbar .dropdown ul li {
-  min-width: 200px;
+  min-width: 12.5rem;
 }
 
 .navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
   text-transform: none;
   color: #151515;
   font-weight: 400;
 }
 
 .navbar .dropdown ul a i {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .navbar .dropdown ul a:hover,
@@ -283,7 +283,7 @@ h6 {
 
 .navbar .dropdown .dropdown ul {
   top: 0;
-  left: calc(100% - 30px);
+  left: calc(100% - 1.875rem);
   visibility: hidden;
 }
 
@@ -294,7 +294,7 @@ h6 {
   visibility: visible;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 85.375rem) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
   }
@@ -309,14 +309,14 @@ h6 {
 */
 .mobile-nav-toggle {
   color: #fff;
-  font-size: 28px;
+  font-size: 1.75rem;
   cursor: pointer;
   display: none;
   line-height: 0;
   transition: 0.5s;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 61.938rem) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -340,18 +340,18 @@ h6 {
 
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 0.938rem;
+  right: 0.938rem;
 }
 
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
+  top: 3.438rem;
+  right: 0.938rem;
+  bottom: 0.938rem;
+  left: 0.938rem;
+  padding: 0.625rem 0;
   background-color: #fff;
   overflow-y: auto;
   transition: 0.3s;
@@ -359,8 +359,8 @@ h6 {
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
-  padding: 10px 20px;
-  font-size: 15px;
+  padding: 0.625rem 20px;
+  font-size: 0.938rem;
   color: #151515;
 }
 
@@ -373,14 +373,14 @@ h6 {
 
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
-  margin: 15px;
+  margin: 0.938rem;
 }
 
 .navbar-mobile .dropdown ul {
   position: static;
   display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
+  margin: 0.625rem 1.25rem;
+  padding: 0.625rem 0;
   z-index: 99;
   opacity: 1;
   visibility: visible;
@@ -389,16 +389,16 @@ h6 {
 }
 
 .navbar-mobile .dropdown ul li {
-  min-width: 200px;
+  min-width: 12.5rem;
 }
 
 .navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   color: #151515;
 }
 
 .navbar-mobile .dropdown ul a i {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .navbar-mobile .dropdown ul a:hover,
@@ -434,15 +434,15 @@ h6 {
 
 #hero .container {
   position: relative;
-  padding-top: 74px;
+  padding-top: 4.625rem;
   text-align: center;
 }
 
 #hero h1 {
   margin: 0;
-  font-size: 59px;
+  font-size: 3.688rem;
   font-weight: 700;
-  line-height: 64px;
+  line-height: 4rem;
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
@@ -455,31 +455,31 @@ h6 {
 
 #hero h2 {
   color: rgba(255, 255, 255, 0.9);
-  margin: 10px 0 0 0;
-  font-size: 19px;
+  margin: 0.625rem 0 0 0;
+  font-size: 1.188rem;
 }
 
 #hero .icon-box {
-  padding: 30px 20px;
+  padding: 1.875rem 1.25rem;
   transition: ease-in-out 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 0.063rem solid rgba(255, 255, 255, 0.3);
   height: 100%;
   text-align: center;
 }
 
 #hero .icon-box i {
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 1;
   color: #ed3c0d;
 }
 
 #hero .icon-box h3 {
   font-weight: 700;
-  margin: 10px 0 0 0;
+  margin: 0.625rem 0 0 0;
   padding: 0;
   line-height: 1;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
 }
 
 #hero .icon-box h3 a {
@@ -495,25 +495,25 @@ h6 {
   border-color: #ed3c0d;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #hero {
     background-attachment: fixed;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   #hero {
     height: auto;
   }
 
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
   }
 
   #hero h2 {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -521,22 +521,22 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 3.75rem 0;
   overflow: hidden;
 }
 
 .section-title {
-  padding-bottom: 40px;
-  margin-bottom: 30px;
+  padding-bottom: 2.5rem;
+  margin-bottom: 1.875rem;
 }
 
 .section-title h2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 0;
-  line-height: 1px;
-  margin: 0 0 5px 0;
-  letter-spacing: 2px;
+  line-height: 0.063rem;
+  margin: 0 0 0.313rem 0;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   color: #aaaaaa;
   font-family: "Poppins", sans-serif;
@@ -544,17 +544,17 @@ section {
 
 .section-title h2::after {
   content: "";
-  width: 120px;
-  height: 1px;
+  width: 7.5rem;
+  height: 0.063rem;
   display: inline-block;
   background: #ffde9e;
-  margin: 4px 10px;
+  margin: 0.25rem 0.625rem;
 }
 
 .section-title p {
   margin: 0;
   margin: 0;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -566,7 +566,7 @@ section {
 --------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -576,15 +576,15 @@ section {
 }
 
 .about .content ul li {
-  padding: 0 0 8px 26px;
+  padding: 0 0 0.5rem 1.625rem;
   position: relative;
 }
 
 .about .content ul i {
   position: absolute;
-  font-size: 20px;
+  font-size: 1.25rem;
   left: 0;
-  top: -3px;
+  top: -0.188rem;
   color: #ed3c0d;
 }
 
@@ -596,7 +596,7 @@ section {
 # Clients
 --------------------------------------------------------------*/
 .clients {
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 
 .clients .swiper-slide img {
@@ -611,13 +611,13 @@ section {
 }
 
 .clients .swiper-pagination {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   position: relative;
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   background-color: #fff;
   opacity: 1;
   background-color: #ddd;
@@ -631,36 +631,36 @@ section {
 # Features
 --------------------------------------------------------------*/
 .features {
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 
 .features .icon-box {
-  padding-left: 15px;
+  padding-left: 0.938rem;
 }
 
 .features .icon-box h4 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin: 5px 0 10px 60px;
+  margin: 0.313rem 0 0.625rem 3.75rem;
 }
 
 .features .icon-box i {
-  font-size: 48px;
+  font-size: 3rem;
   float: left;
   color: #ed3c0d;
 }
 
 .features .icon-box p {
-  font-size: 15px;
+  font-size: 0.938rem;
   color: #848484;
-  margin-left: 60px;
+  margin-left: 3.75rem;
 }
 
 .features .image {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 25rem;
 }
 
 /*--------------------------------------------------------------
@@ -670,12 +670,12 @@ section {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 
 .cta h3 {
   color: #fff;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
@@ -686,14 +686,14 @@ section {
 .cta .cta-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 0.063rem;
   display: inline-block;
-  padding: 8px 28px;
-  border-radius: 4px;
+  padding: 0.5rem 1.75rem;
+  border-radius: 0.25rem;
   transition: 0.5s;
-  margin-top: 10px;
-  border: 2px solid #fff;
+  margin-top: 0.625rem;
+  border: 0.125rem solid #fff;
   color: #fff;
 }
 
@@ -707,12 +707,12 @@ section {
 # Counts
 --------------------------------------------------------------*/
 .counts .content {
-  padding: 30px 0;
+  padding: 1.875rem 0;
 }
 
 .counts .content h3 {
   font-weight: 700;
-  font-size: 34px;
+  font-size: 2.125rem;
   color: #151515;
 }
 
@@ -721,40 +721,40 @@ section {
 }
 
 .counts .content .count-box {
-  padding: 20px 0;
+  padding: 1.25rem 0;
   width: 100%;
 }
 
 .counts .content .count-box i {
   display: block;
-  font-size: 36px;
+  font-size: 2.25rem;
   color: #ed3c0d;
   float: left;
 }
 
 .counts .content .count-box span {
-  font-size: 36px;
-  line-height: 30px;
+  font-size: 2.25rem;
+  line-height: 1.875rem;
   display: block;
   font-weight: 700;
   color: #151515;
-  margin-left: 50px;
+  margin-left: 3.125rem;
 }
 
 .counts .content .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 50px;
+  padding: 0.938rem 0 0 0;
+  margin: 0 0 0 3.125rem;
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #3b3b3b;
 }
 
 .counts .content .count-box a {
   font-weight: 600;
   display: block;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   color: #3b3b3b;
-  font-size: 15px;
+  font-size: 0.938rem;
   font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
 }
@@ -766,10 +766,10 @@ section {
 .counts .image {
   background: url("../img/counts-img.jpg") center center no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 25rem;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 61.938rem) {
   .counts .image {
     text-align: center;
   }
@@ -779,7 +779,7 @@ section {
   }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 41.688rem) {
   .counts .image img {
     max-width: 100%;
   }
@@ -789,7 +789,7 @@ section {
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials {
-  padding: 80px 0;
+  padding: 5rem 0;
   background: url("../img/testimonials-bg.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
@@ -807,7 +807,7 @@ section {
 }
 
 .testimonials .section-header {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .testimonials .testimonials-carousel,
@@ -821,58 +821,58 @@ section {
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
+  width: 6.25rem;
   border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.15);
+  border: 0.375rem solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
 }
 
 .testimonials .testimonial-item h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin: 10px 0 5px 0;
+  margin: 0.625rem 0 0.313rem 0;
   color: #fff;
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #ddd;
-  margin: 0 0 15px 0;
+  margin: 0 0 0.938rem 0;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 26px;
+  font-size: 1.625rem;
 }
 
 .testimonials .testimonial-item .quote-icon-left {
   display: inline-block;
-  left: -5px;
+  left: -0.313rem;
   position: relative;
 }
 
 .testimonials .testimonial-item .quote-icon-right {
   display: inline-block;
-  right: -5px;
+  right: -0.313rem;
   position: relative;
-  top: 10px;
+  top: 0.625rem;
 }
 
 .testimonials .testimonial-item p {
   font-style: italic;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 0.938rem auto;
   color: #eee;
 }
 
 .testimonials .swiper-pagination {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   position: relative;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   background-color: rgba(255, 255, 255, 0.4);
   opacity: 0.5;
 }
@@ -882,13 +882,13 @@ section {
   opacity: 1;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .testimonials {
     background-attachment: fixed;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
   .testimonials .testimonial-item p {
     width: 80%;
   }
@@ -899,15 +899,15 @@ section {
 --------------------------------------------------------------*/
 .team {
   background: #fff;
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 
 .team .member {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0.125rem 0.938rem rgba(0, 0, 0, 0.1);
 }
 
 .team .member .member-img {
@@ -918,7 +918,7 @@ section {
 .team .member .social {
   position: absolute;
   left: 0;
-  bottom: 30px;
+  bottom: 1.875rem;
   right: 0;
   opacity: 0;
   transition: ease-in-out 0.3s;
@@ -928,10 +928,10 @@ section {
 .team .member .social a {
   transition: color 0.3s;
   color: #151515;
-  margin: 0 3px;
-  border-radius: 4px;
-  width: 36px;
-  height: 36px;
+  margin: 0 0.188rem;
+  border-radius: 0.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
   background: rgba(255, 255, 255, 0.8);
   transition: ease-in-out 0.3s;
   color: #484848;
@@ -946,38 +946,38 @@ section {
 }
 
 .team .member .social i {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 0;
 }
 
 .team .member .member-info {
-  padding: 25px 15px;
+  padding: 1.563rem 0.938rem;
 }
 
 .team .member .member-info h4 {
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
+  margin-bottom: 0.313rem;
+  font-size: 1.125rem;
   color: #151515;
 }
 
 .team .member .member-info span {
   display: block;
-  font-size: 13px;
+  font-size: 0.813rem;
   font-weight: 400;
   color: #aaaaaa;
 }
 
 .team .member .member-info p {
   font-style: italic;
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
   color: #777777;
 }
 
 .team .member:hover .social {
   opacity: 1;
-  bottom: 15px;
+  bottom: 0.938rem;
 }
 
 /*--------------------------------------------------------------
@@ -989,37 +989,37 @@ section {
 }
 
 .contact .info i {
-  font-size: 20px;
+  font-size: 0.125rem;
   background: #ed3c0d;
   color: #151515;
   float: left;
-  width: 44px;
-  height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   transition: all 0.3s ease-in-out;
 }
 
 .contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
+  padding: 0 0 0 3.75rem;
+  font-size: 1.375rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
   color: #151515;
 }
 
 .contact .info p {
-  padding: 0 0 0 60px;
+  padding: 0 0 0 3.75rem;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #484848;
 }
 
 .contact .info .email,
 .contact .info .phone {
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .contact .php-email-form {
@@ -1028,7 +1028,7 @@ section {
 }
 
 .contact .php-email-form .form-group {
-  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
 }
 
 .contact .php-email-form .error-message {
@@ -1036,12 +1036,12 @@ section {
   color: #fff;
   background: #ed3c0d;
   text-align: left;
-  padding: 15px;
+  padding: 0.938rem;
   font-weight: 600;
 }
 
 .contact .php-email-form .error-message br + br {
-  margin-top: 25px;
+  margin-top: 1.563rem;
 }
 
 .contact .php-email-form .sent-message {
@@ -1049,7 +1049,7 @@ section {
   color: #fff;
   background: #18d26e;
   text-align: center;
-  padding: 15px;
+  padding: 0.938rem;
   font-weight: 600;
 }
 
@@ -1057,17 +1057,17 @@ section {
   display: none;
   background: #fff;
   text-align: center;
-  padding: 15px;
+  padding: 0.938rem;
 }
 
 .contact .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.625rem -0.375rem 0;
+  border: 0.188rem solid #18d26e;
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
 }
@@ -1076,8 +1076,8 @@ section {
 .contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
-  font-size: 14px;
-  border-radius: 4px;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
 }
 
 .contact .php-email-form input:focus,
@@ -1086,20 +1086,20 @@ section {
 }
 
 .contact .php-email-form input {
-  height: 44px;
+  height: 2.75rem;
 }
 
 .contact .php-email-form textarea {
-  padding: 10px 12px;
+  padding: 0.625rem 0.75rem;
 }
 
 .contact .php-email-form button[type="submit"] {
   background: #ed3c0d;
   border: 0;
-  padding: 10px 24px;
+  padding: 0.625rem 1.5rem;
   color: #ffffff;
   transition: 0.4s;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -1120,14 +1120,14 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 15px 0;
+  padding: 0.938rem 0;
   background: whitesmoke;
-  min-height: 40px;
-  margin-top: 74px;
+  min-height: 2.5rem;
+  margin-top: 4.625rem;
 }
 
 .breadcrumbs h2 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
 }
 
@@ -1140,19 +1140,19 @@ section {
 }
 
 .breadcrumbs ol li + li {
-  padding-left: 10px;
+  padding-left: 0.625rem;
 }
 
 .breadcrumbs ol li + li::before {
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 0.625rem;
   color: #2f2f2f;
   content: "/";
 }
 
-@media (max-width: 992px) {
+@media (max-width: 62rem) {
   .breadcrumbs {
-    margin-top: 68px;
+    margin-top: 4.25rem;
   }
 
   .breadcrumbs .d-flex {
@@ -1174,25 +1174,25 @@ section {
 
 #footer {
   background: black;
-  padding: 0 0 30px 0;
+  padding: 0 0 1.875rem 0;
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 #footer .footer-top {
   background: #151515;
-  border-bottom: 1px solid #222222;
-  padding: 60px 0 30px 0;
+  border-bottom: 0.063rem solid #222222;
+  padding: 3.75rem 0 1.875rem 0;
 }
 
 #footer .footer-top .footer-info {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 #footer .footer-top .footer-info h4 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
-  padding: 2px 0;
+  font-size: 1.75rem;
+  margin: 0 0 1.25rem 0;
+  padding: 0.125rem 0;
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
@@ -1200,25 +1200,25 @@ section {
 }
 
 #footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
   color: #fff;
 }
 
 #footer .footer-top .social-links a {
-  font-size: 18px;
+  font-size: 1.125rem;
   display: inline-block;
   background: #292929;
   color: #fff;
   line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 4px;
+  padding: 0.5rem 0;
+  margin-right: 0.25rem;
+  border-radius: 0.25rem;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   transition: 0.3s;
 }
 
@@ -1231,10 +1231,10 @@ section {
 /* Contact Form Section */
 #footer .footer-top form {
   background: #151515; /* Matches the footer background */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.1); /* Soft highlight */
-  border: 1px solid #ed3c0d; /* Highlight the box */
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 0.625rem 0.125rem rgba(255, 255, 255, 0.1); /* Soft highlight */
+  border: 0.063rem solid #ed3c0d; /* Highlight the box */
 }
 
 #footer .footer-top form input[type="text"],
@@ -1242,11 +1242,11 @@ section {
 #footer .footer-top form textarea {
   background: #333; /* Darker background to blend with footer */
   color: #fff;
-  border: 2px solid #ed3c0d; /* Red highlight for form inputs */
-  padding: 10px;
-  border-radius: 5px;
+  border: 0.125rem solid #ed3c0d; /* Red highlight for form inputs */
+  padding: 0.625rem;
+  border-radius: 0.313rem;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 0.938rem;
   transition: 0.3s ease;
 }
 
@@ -1265,8 +1265,8 @@ section {
   background: #ed3c0d;
   color: #fff;
   border: none;
-  padding: 10px 25px;
-  border-radius: 5px;
+  padding: 0.625rem 1.563rem;
+  border-radius: 0.313rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -1277,19 +1277,19 @@ section {
 
 /* Newsletter Section */
 #footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   background: #151515;
-  padding: 10px;
-  border: 1px solid #ed3c0d;
-  border-radius: 8px;
+  padding: 0.625rem;
+  border: 0.063rem solid #ed3c0d;
+  border-radius: 0.5rem;
 }
 
 #footer .footer-top .footer-newsletter form input[type="email"] {
   background: #333;
   color: #fff;
-  border: 2px solid #ed3c0d;
-  padding: 10px;
-  border-radius: 5px;
+  border: 0.125rem solid #ed3c0d;
+  padding: 0.625rem;
+  border-radius: 0.313rem ;
   width: calc(100% - 120px);
 }
 
@@ -1297,8 +1297,8 @@ section {
   background: #ed3c0d;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.313rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -1310,14 +1310,14 @@ section {
 /* Footer Bottom Section */
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 1.875rem;
   color: #fff;
 }
 
 #footer .credits {
-  padding-top: 10px;
+  padding-top: 0.625rem;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.813rem;
   color: #fff;
 }
 
@@ -1329,42 +1329,31 @@ section {
 .bento-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 250px);
-  gap: 30px;
-  max-width: 1296px;
-  /* width: 100%; */
-  /* padding: 20px; */
+  grid-template-rows: repeat(4, 15.625rem);
+  gap: 1.875rem;
+  max-width: 81rem;
   margin: 0 auto;
 }
 
 .bento-item {
   position: relative;
   background-color: #c2c2c2;
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 0.938rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   overflow: hidden;
   width: 100%;
   background-size: cover;
   background-position: center;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  /* Add initial subtle shadow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .bento-item:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  box-shadow: 0 .0.5rem 1rem rgba(0, 0, 0, 0.3); 
   transform: scale(1.02);
-  /* border-collapse: separate;
-  border-spacing: 2px;
-
-   border: 4px solid #03045e; 
-  padding: 5px; */
-  /* border-inner: 1px solid #000; */
 }
 
 .bento-item h1 {
@@ -1374,6 +1363,7 @@ section {
   letter-spacing: 1.5;
   color: #03045e;
 }
+
 .bento-item h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
@@ -1381,38 +1371,89 @@ section {
   letter-spacing: 1;
   color: #03045e;
 }
+
 .bento-item p {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   color: #666;
 }
 
-/* .bento-item:nth-child(1) {
-  grid-column: span 2;
-}
-.bento-item:nth-child(4) {
-  grid-column: span 2;
-}
-.bento-item:nth-child(5) {
-  grid-column: span 2;
-}
-.bento-item:nth-child(6) {
-  grid-column: span 1;
-}
-.bento-item:nth-child(8) {
-  grid-column: span 2;
-} */
-
 .bento-item-large {
   grid-column: span 2;
 }
+
 .date-attach-flex {
   display: flex;
-  /* justify-content: first baseline; */
   align-content: center;
-
-  /* margin-bottom: 0; */
 }
+
+/* Responsive styles */
+
+/* Tablet view (medium screens) */
+@media (max-width: 1024px) {
+  .bento-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.25rem;
+  }
+
+  .bento-item h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile view (small screens) */
+@media (max-width: 768px) {
+  .bento-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .bento-item {
+    padding: 0.75rem; /* Reduce padding to fit better on small screens */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bento-item h1 {
+    font-size: 1.5rem; /* Reduce font size for titles on small screens */
+    text-align: center; /* Center align titles for better look */
+  }
+
+  .bento-item h2, .bento-item p {
+    font-size: 0.875rem; /* Adjust font size for secondary text */
+    text-align: center;
+  }
+
+  /* Adjust the large item behavior on small screens */
+  .bento-item-large {
+    grid-column: span 1; /* No need for large items to span multiple columns */
+  }
+}
+
+/* Very small screens (below 480px) */
+@media (max-width: 480px) {
+  .bento-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+  }
+
+  .bento-item {
+    padding: 0.5rem; /* Further reduce padding for tiny screens */
+  }
+
+  .bento-item h1 {
+    font-size: 1.25rem; /* Adjust heading size further for small screens */
+  }
+
+  .bento-item h2, .bento-item p {
+    font-size: 0.75rem; /* Smaller font for secondary text */
+  }
+}
+
 
 /* .workshop-bento {
   display: grid;
@@ -1425,7 +1466,7 @@ section {
 }
 
 #services #card-area {
-  padding: 50px 0;
+  padding: 3.125rem 0;
 }
 
 #services .slider-container {
@@ -1452,12 +1493,12 @@ section {
 #services .card {
   position: relative;
   overflow: hidden;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
+  box-shadow: 0.313rem 0.313rem 0.938rem rgba(0, 0, 0, 0.9);
+  border-radius: 0.625rem;
   min-width: 25%; /* Ensure 3 cards are visible */
-  height: 400px;
+  height: 25rem;
   background: transparent;
-  margin: 0 5px;
+  margin: 0 0.313rem;
   box-sizing: border-box;
   align-items: center;
 }
@@ -1465,7 +1506,7 @@ section {
 #services .card img {
   width: 100%;
   height: 100%; /* Ensure image covers the card */
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: block;
   transition: transform 0.5s;
   position:relative;
@@ -1475,7 +1516,7 @@ section {
   width: 100%;
   height: 0;
   background: linear-gradient(transparent, #1c1c1c 58%);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1484,9 +1525,9 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   transition: height 0.5s;
   z-index: 2;
 }
@@ -1494,20 +1535,20 @@ section {
 #services .card .overlay h3 {
   color: #ddd;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
   margin-top: 80%;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
-  letter-spacing: 2px;
+  font-size: 1.875rem;
+  letter-spacing: 0.125rem;
   background: transparent;
   border: #007bff;
 }
 
 #services .card .overlay p {
   color: #c2c2c2;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
-  padding: 10px; /* Add padding around the text */
+  padding: 0.625rem; /* Add padding around the text */
   word-wrap: break-word; /* Break long words to avoid overflow */
   overflow-wrap: break-word; /* Ensure long text breaks properly */
   margin: 0; /* Remove extra margins that may cause content overflow */
@@ -1515,14 +1556,14 @@ section {
 }
 
 #services .card .overlay a {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   color: #262626;
   text-decoration: none;
   font-size: 14px;
   background: #fff;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   text-align: center;
-  padding: 5px 15px;
+  padding: 0.313rem 0.938rem;
 }
 
 #services .card:hover img {
@@ -1535,14 +1576,14 @@ section {
 
 #services .nav-btn {
   background: transparent; /* No background color for minimalist look */
-  border: 2px solid #007bff; /* Border to define the button */
+  border: 0.125rem solid #007bff; /* Border to define the button */
   color: #007bff; /* Button color matching the border */
   border-radius: 50%; /* Round button shape */
-  padding: 8px; /* Adjust size of the button */
+  padding: 0.5rem; /* Adjust size of the button */
   cursor: pointer;
-  font-size: 16px; /* Adjust font size */
-  width: 40px; /* Fixed width and height for consistency */
-  height: 40px;
+  font-size: 1rem; /* Adjust font size */
+  width: 2.5rem; /* Fixed width and height for consistency */
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1561,22 +1602,22 @@ section {
 }
 
 #services #prevBtn {
-  left: 10px; /* Adjust as needed */
+  left: 0.625rem; /* Adjust as needed */
 }
 
 #services #nextBtn {
-  right: 10px; /* Adjust as needed */
+  right: 0.625rem; /* Adjust as needed */
 }
 #services .slider .card:nth-child(4) {
   display: none;
 }
 #services .section-title h2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
-  padding-left: 80px;
-  line-height: 1px;
-  margin: 0 0 5px 0;
-  letter-spacing: 2px;
+  padding-left: 0.313rem;
+  line-height: 0.063rem;
+  margin: 0 0 0.313rem 0;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   color: #aaaaaa;
   font-family: "Poppins", sans-serif;
@@ -1584,20 +1625,20 @@ section {
 
 #services .section-title h2::after {
   content: "";
-  width: 120px;
-  height: 1px;
+  width: 7.5rem;
+  height: 0.063rem;
   display: inline-block;
   background: #ffde9e;
-  margin: 4px 10px;
+  margin: 0.25rem 0.625rem;
 }
 
 #services .section-title p {
   margin: 0;
   margin: 0;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #151515;
-  padding-left: 80px;
+  padding-left: 5rem;
 }
