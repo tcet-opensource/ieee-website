@@ -37,7 +37,7 @@ nextBtn.addEventListener('click', () => {
   clickCount++;
   currentSlide++;
   
-  if (clickCount >= 4) {
+  if (clickCount >= 5) {
     currentSlide = 0; // Return to original position
     clickCount = 0; // Reset the click counter
   } else if (currentSlide > totalSlides - visibleCards) {

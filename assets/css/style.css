@@ -1464,11 +1464,11 @@ section {
 
 #services .card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure image covers the card */
+  height: 100%; /* Ensure image covers the card */
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
+  position:relative;
 }
 
 #services .card .overlay {
