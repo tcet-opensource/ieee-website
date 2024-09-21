@@ -1343,7 +1343,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.1rem rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   overflow: hidden;
   width: 100%;
@@ -1352,7 +1352,7 @@ section {
 }
 
 .bento-item:hover {
-  box-shadow: 0 .0.5rem 1rem rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 .0.5rem 0.1rem rgba(0, 0, 0, 0.3); 
   transform: scale(1.02);
 }
 
@@ -1461,6 +1461,7 @@ section {
 } */
 /* End of Bento CSS */
 
+/* Ensure cards and images scale well */
 #services .wrapper {
   padding: 0 5%; /* Already responsive */
 }
@@ -1535,7 +1536,7 @@ section {
   color: #ddd;
   font-weight: 500;
   margin-bottom: 0.313rem;
-  margin-top: 80%;
+  margin-top: 80%; /* Adjust margin */
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.875rem;
   letter-spacing: 0.125rem;
@@ -1560,7 +1561,9 @@ section {
   background: #fff;
   border-radius: 3.125rem;
   text-align: center;
-  padding: 0.313rem 0.938rem;
+  padding: 0.25rem 0.5rem; /* Smaller button */
+  margin-bottom: 0.5rem; /* Added bottom margin */
+  display: inline-block; /* Fit content */
 }
 
 #services .card:hover img {
@@ -1605,10 +1608,6 @@ section {
   right: 0.625rem;
 }
 
-#services .slider .card:nth-child(4) {
-  display: none;
-}
-
 #services .section-title h2 {
   font-size: 0.875rem;
   font-weight: 500;
@@ -1643,7 +1642,7 @@ section {
 /* Responsive Styles */
 
 /* Tablet view */
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   #services .cards-wrapper {
     justify-content: space-around;
   }
@@ -1660,9 +1659,9 @@ section {
 }
 
 /* Mobile view */
-/* Mobile view for 2 cards */
-/* Mobile view for 2 cards */
-@media (max-width: 768px) {
+/* Mobile view */
+/* Mobile view */
+@media (max-width: 48rem) {
   #services .cards-wrapper {
     justify-content: flex-start;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
@@ -1678,66 +1677,22 @@ section {
 
   #services .card img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
     border-radius: 0.625rem;
     display: block;
     transition: transform 0.5s;
   }
 
   #services .card .overlay {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(transparent, #1c1c1c 58%);
-    border-radius: 0.625rem;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 1.25rem;
-    text-align: center;
-    font-size: 0.875rem;
-    transition: height 0.5s;
-    z-index: 2;
-  }
-
-  #services .card .overlay h3 {
-    color: #ddd;
-    font-weight: 500;
-    margin-bottom: 0.313rem;
-    margin-top: 50%; /* Reduced margin for smaller screens */
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.5rem; /* Slightly reduced font size */
-    letter-spacing: 0.125rem;
-  }
-
-  #services .card .overlay p {
-    color: #c2c2c2;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    padding: 0.625rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin: 0;
-    white-space: normal;
-  }
-
-  #services .card .overlay a {
-    margin-top: 0.625rem;
-    color: #262626;
-    text-decoration: none;
-    font-size: 14px;
-    background: #fff;
-    border-radius: 3.125rem;
-    text-align: center;
-    padding: 0.313rem 0.938rem;
+    height: 0; /* Initially hidden */
   }
 
   #services .card:hover .overlay {
-    height: 100%;
+    height: 100%; /* Show overlay on hover */
+  }
+
+  #services .card .overlay h3 {
+    margin-top: auto; /* Keeps it at the bottom */
   }
 
   #services .section-title p {
@@ -1756,23 +1711,23 @@ section {
   }
 }
 
-/* Very small screens for 2 cards */
-@media (max-width: 480px) {
+/* Very small screens */
+@media (max-width: 30rem) {
   #services .card {
     min-width: 48%; /* Two cards side by side */
-    height: auto;
+    height: 100%;
     max-height: 22rem; /* Slightly reduce height on very small screens */
     margin: 0 1%; /* Maintain space between cards */
   }
 
   #services .card img {
-    height: auto;
+    width: 100%;
+    height: 100%;
     max-height: 12rem; /* Ensure the image is responsive */
   }
 
   #services .card .overlay h3 {
     font-size: 1.25rem; /* Slightly smaller heading */
-    margin-top: 40%;
   }
 
   #services .section-title p {
@@ -1785,4 +1740,109 @@ section {
     height: 1.75rem;
     font-size: 0.75rem;
   }
+}
+#services .card:first-child img {
+  object-fit: contain; /* Maintain aspect ratio and prevent cutting */
+  height: auto; /* Adjust height if needed */
+}
+#services :nth-child(4){
+  display: none;
+}
+/* Ensure grid gap and layout consistency */
+/* Custom class for 5 columns on large screens */
+.col-lg-5th {
+  flex: 0 0 20%; /* 20% width for 5 cards per row */
+  max-width: 20%;
+  padding: 15px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1199.98px) {
+  .col-lg-5th {
+    flex: 0 0 33.33%; /* 3 cards per row */
+    max-width: 33.33%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .col-lg-5th {
+    flex: 0 0 50%; /* 2 cards per row for tablets */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .col-lg-5th {
+    flex: 0 0 50%; /* 2 cards per row for mobile screens */
+    max-width: 50%;
+  }
+}
+
+/* Ensure grid gap and layout consistency */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.member {
+  background: #fff;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* Style the image inside the cards */
+.member-img img {
+  width: 100%;
+  transition: transform 0.3s ease;
+  border-radius: 10px 10px 0 0;
+}
+
+.member-img:hover img {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+/* Social icons transition */
+.social {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.member-img:hover .social {
+  opacity: 1;
+  visibility: visible;
+}
+
+.social a {
+  color: #333;
+  margin: 0 10px;
+  display: inline-block;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: #007bff;
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-info h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.member-info span {
+  display: block;
+  color: #888;
 }
