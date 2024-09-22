@@ -1203,7 +1203,7 @@ section {
   font-size: 0.875rem;
   line-height: 1.5rem;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #fff;
 }
 
@@ -1584,9 +1584,8 @@ section {
   font-weight: 500;
   margin-bottom: 0.313rem;
   margin-top: 80%; /* Adjust margin */
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.875rem;
-  letter-spacing: 0.125rem;
 }
 
 #services .card .overlay p {
@@ -1606,7 +1605,7 @@ section {
   text-decoration: none;
   font-size: 14px;
   background: #fff;
-  border-radius: 3.125rem;
+  border-radius: 0.25rem;
   text-align: center;
   padding: 0.25rem 0.5rem; /* Smaller button */
   margin-bottom: 0.5rem; /* Added bottom margin */
