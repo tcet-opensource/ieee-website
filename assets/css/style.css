@@ -1320,7 +1320,50 @@ section {
   font-size: 0.813rem;
   color: #fff;
 }
+/* Newsletter Section */
 
+
+@media (max-width: 30rem){
+.footer .footer-top .footer-newsletter {
+  margin-top: 2.5rem; /* Increase margin to create more space */
+}
+
+/* Adjust the Contact Form Section for spacing */
+.footer .footer-top form {
+  margin-bottom: 2rem; /* Add margin above the contact form for extra space */
+}
+  .footer .footer-top {
+    padding: 1.5rem 0; /* Further reduce padding */
+  }
+
+  .footer .footer-top .footer-info h4 {
+    font-size: 1.25rem; /* Smaller heading */
+  }
+
+  .footer .footer-top .footer-info p {
+    font-size: 0.65rem; /* Even smaller paragraph text */
+  }
+
+  .footer .footer-top .social-links a {
+    width: 1.75rem; /* Even smaller icons */
+    height: 1.75rem;
+    font-size: 0.9rem; /* Smaller icon font size */
+  }
+
+  .footer .footer-top form {
+    padding: 0.75rem; /* Further reduce padding */
+  }
+
+  .footer .footer-top form input[type="text"],
+  .footer .footer-top form input[type="email"],
+  .footer .footer-top form textarea {
+    padding: 0.5rem; /* Maintain padding */
+  }
+
+  .footer .footer-top .footer-newsletter form input[type="email"] {
+    width: calc(100% - 80px); /* Adjust width for very small screens */
+  }
+}
 /* Start of Bento CSS */
 /* section {
   width: 100%;
@@ -1416,23 +1459,24 @@ section {
     padding: 0.75rem; /* Reduce padding to fit better on small screens */
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
   }
 
   .bento-item h1 {
     font-size: 1.5rem; /* Reduce font size for titles on small screens */
-    text-align: center; /* Center align titles for better look */
+    text-align: left; /* Center align titles for better look */
   }
 
   .bento-item h2,
   .bento-item p {
     font-size: 0.875rem; /* Adjust font size for secondary text */
-    text-align: center;
+    text-align: left;
   }
 
   /* Adjust the large item behavior on small screens */
   .bento-item-large {
-    grid-column: span 1; /* No need for large items to span multiple columns */
+    grid-column: span 1;
+    align-items: left; /* No need for large items to span multiple columns */
   }
 }
 
