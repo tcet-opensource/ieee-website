@@ -1500,7 +1500,7 @@ section {
   box-shadow: 0.313rem 0.313rem 0.938rem rgba(0, 0, 0, 0.9);
   border-radius: 0.625rem;
   min-width: 25%; /* Ensure 4 cards are visible on large screens */
-  height: 25rem;
+  height: 30rem; /* Increased vertical size */
   background: transparent;
   margin: 0 0.313rem;
   box-sizing: border-box;
@@ -1574,7 +1574,7 @@ section {
 }
 
 #services .card:hover .overlay {
-  height: 100%;
+  height: 100%; /* Show overlay on hover */
 }
 
 #services .nav-btn {
@@ -1641,7 +1641,6 @@ section {
   color: #151515;
   padding-left: 5rem;
 }
-
 /* Responsive Styles */
 
 /* Tablet view */
@@ -1652,7 +1651,7 @@ section {
 
   #services .card {
     min-width: 45%; /* Show 2 cards at a time on tablet */
-    height: 22rem; /* Adjust card height */
+    height: 27rem; /* Increased vertical size for tablet */
   }
 
   #services .section-title p {
@@ -1663,7 +1662,6 @@ section {
 
 /* Mobile view */
 /* Mobile view */
-/* Mobile view */
 @media (max-width: 48rem) {
   #services .cards-wrapper {
     justify-content: flex-start;
@@ -1671,11 +1669,11 @@ section {
   }
 
   #services .card {
-    min-width: 48%; /* Two cards side by side, each taking ~48% width */
+    min-width: 48%; /* Two cards side by side */
     height: auto; /* Let the card adapt its height */
-    max-height: 25rem; /* Limit card height if necessary */
     margin: 0 1%; /* Add a margin between cards */
     overflow: hidden; /* Prevent content overflow */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Maintain shadow */
   }
 
   #services .card img {
@@ -1687,31 +1685,26 @@ section {
   }
 
   #services .card .overlay {
+    background: linear-gradient( rgba(28, 28, 28, 0.9)); /* Darker gradient */
     height: 0; /* Initially hidden */
+    transition: height 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.7); /* Darker shadow for mobile overlay */
+    overflow: hidden; /* Prevent overflow */
   }
 
   #services .card:hover .overlay {
-    height: 100%; /* Show overlay on hover */
+    height: 130%; /* Set overlay height to 130% on hover */
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.9); /* Even stronger shadow on hover */
   }
 
-  #services .card .overlay h3 {
-    margin-top: auto; /* Keeps it at the bottom */
+  #services .card .overlay h3,
+  #services .card .overlay p {
+    margin-bottom: 0; /* Ensure there's no margin cutting off text */
   }
 
   #services .section-title p {
     padding-left: 1rem;
     font-size: 1.5rem;
-  }
-
-  #services .nav-btn {
-    width: 2rem;
-    height: 2rem;
-    font-size: 0.875rem;
-  }
-
-  #services #prevBtn,
-  #services #nextBtn {
-    top: 40%;
   }
 }
 
@@ -1719,32 +1712,23 @@ section {
 @media (max-width: 30rem) {
   #services .card {
     min-width: 48%; /* Two cards side by side */
-    height: 100%;
-    max-height: 22rem; /* Slightly reduce height on very small screens */
-    margin: 0 1%; /* Maintain space between cards */
+    height: auto; /* Let the card adapt its height */
+    margin: 0 1%; /* Add a margin between cards */
+    overflow: hidden; /* Prevent content overflow */
   }
 
-  #services .card img {
-    width: 100%;
-    height: 100%;
-    max-height: 12rem; /* Ensure the image is responsive */
+  #services .card .overlay {
+    background: linear-gradient(rgba(28, 28, 28, 0.9)); /* Darker gradient */
+    height: 0; /* Initially hidden */
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.7); /* Darker shadow for mobile overlay */
   }
 
-  #services .card .overlay h3 {
-    font-size: 1.25rem; /* Slightly smaller heading */
-  }
-
-  #services .section-title p {
-    font-size: 1.25rem;
-    padding-left: 0.5rem;
-  }
-
-  #services .nav-btn {
-    width: 1.75rem;
-    height: 1.75rem;
-    font-size: 0.75rem;
+  #services .card:hover .overlay {
+    height: 130%; /* Set overlay height to 130% on hover */
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.9); /* Even stronger shadow on hover */
   }
 }
+
 #services .card:first-child img {
   object-fit: contain; /* Maintain aspect ratio and prevent cutting */
   height: auto; /* Adjust height if needed */
