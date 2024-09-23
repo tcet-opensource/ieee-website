@@ -1383,7 +1383,7 @@ section {
 .bento-item {
   position: relative;
   background-color: #c2c2c2;
-  border-radius: 0.938rem;
+  border-radius: 0.5rem;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -1562,7 +1562,7 @@ section {
 #services .card {
   position: relative;
   overflow: hidden;
-  border-radius: 0.625rem;
+  border-radius: 0.25rem;
   min-width: 25%; /* Ensure 4 cards are visible on large screens */
   height: 30rem; /* Increased vertical size */
   background: transparent;
@@ -1574,7 +1574,7 @@ section {
 #services .card img {
   width: 100%;
   height: 100%;
-  border-radius: 0.625rem;
+  border-radius: 0.25rem;
   display: block;
   transition: transform 0.5s;
 }
@@ -1583,7 +1583,7 @@ section {
   width: 100%;
   height: 0;
   background: linear-gradient(transparent, #1c1c1c 58%);
-  border-radius: 0.625rem;
+  border-radius: 0.25rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1780,7 +1780,7 @@ section {
   #services .card img {
     width: 100%;
     height: 100%; /* Maintain aspect ratio */
-    border-radius: 0.625rem;
+    border-radius: 0.25rem;
     display: block;
     transition: transform 0.5s;
   }
