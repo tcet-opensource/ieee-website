@@ -1556,12 +1556,12 @@ section {
   justify-content: space-between;
   transition: transform 0.3s ease-in-out;
   width: 100%;
+  gap: 4px;
 }
 
 #services .card {
   position: relative;
   overflow: hidden;
-  box-shadow: 0.313rem 0.313rem 0.938rem rgba(0, 0, 0, 0.9);
   border-radius: 0.625rem;
   min-width: 25%; /* Ensure 4 cards are visible on large screens */
   height: 30rem; /* Increased vertical size */
@@ -1774,8 +1774,7 @@ section {
     min-width: 48%; /* Two cards side by side */
     height: auto; /* Let the card adapt its height */
     margin: 0 1%; /* Add a margin between cards */
-    overflow: hidden; /* Prevent content overflow */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Maintain shadow */
+    overflow: hidden; /* Prevent content overflow */ /* Maintain shadow */
   }
 
   #services .card img {
