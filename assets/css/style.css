@@ -1377,7 +1377,7 @@ section {
   max-width: 81rem;
   margin: 0 auto;
   /* check padding later*/
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 .bento-item {
@@ -1396,6 +1396,10 @@ section {
   background-position: center;
 }
 
+.bento-item img {
+  height: 30px;
+  width: 30px;
+}
 .bento-item:hover {
   box-shadow: 0 .0.5rem 0.1rem rgba(0, 0, 0, 0.3); 
   transform: scale(1.02);
@@ -1450,18 +1454,25 @@ section {
 /* Mobile view (small screens) */
 @media (max-width: 768px) {
   .bento-container {
+    padding: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 1rem;
   }
 
   .bento-item {
-    padding: 0.75rem; /* Reduce padding to fit better on small screens */
+    padding-top: 0;
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; /* Reduce padding to fit better on small screens */
     flex-direction: column;
     justify-content: center;
     align-items: left;
   }
-
+  .bento-item img {
+    height: 0.938rem;
+    width: 0.938rem;
+  }
   .bento-item h1 {
     font-size: 1.5rem; /* Reduce font size for titles on small screens */
     text-align: left; /* Center align titles for better look */
@@ -1472,7 +1483,11 @@ section {
     font-size: 0.875rem; /* Adjust font size for secondary text */
     text-align: left;
   }
-
+  #container .section-title p {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
   /* Adjust the large item behavior on small screens */
   .bento-item-large {
     grid-column: span 1;
@@ -1491,7 +1506,10 @@ section {
   .bento-item {
     padding: 0.5rem; /* Further reduce padding for tiny screens */
   }
-
+  .bento-item img {
+    height: 0.938rem;
+    width: 0.938rem;
+  }
   .bento-item h1 {
     font-size: 1.25rem; /* Adjust heading size further for small screens */
   }
@@ -1501,7 +1519,10 @@ section {
     font-size: 0.75rem; /* Smaller font for secondary text */
   }
 }
-
+#container .section-title p{
+  padding-bottom: 0;
+  padding-top: 0;
+}
 /* .workshop-bento {
   display: grid;
   justify-content: center;
@@ -1509,13 +1530,11 @@ section {
 /* End of Bento CSS */
 
 /* Ensure cards and images scale well */
+
 #services .wrapper {
   padding: 0 5%; /* Already responsive */
 }
 
-#services #card-area {
-  padding: 3.125rem 0; /* Retain as is */
-}
 
 #services .slider-container {
   display: flex;
@@ -1546,7 +1565,7 @@ section {
   min-width: 25%; /* Ensure 4 cards are visible on large screens */
   height: 30rem; /* Increased vertical size */
   background: transparent;
-  margin: 0 0.313rem;
+  margin: 0;
   box-sizing: border-box;
   align-items: center;
 }
@@ -1657,7 +1676,7 @@ section {
 #services .section-title h2 {
   font-size: 0.875rem;
   font-weight: 500;
-  padding-left: 0.313rem;
+  padding-left: 5rem;
   line-height: 0.063rem;
   margin: 0 0 0.313rem 0;
   letter-spacing: 0.125rem;
@@ -1706,6 +1725,10 @@ section {
 /* Mobile view */
 /* Mobile view */
 @media (max-width: 48rem) {
+  #services{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   #services .cards-wrapper {
     justify-content: flex-start;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
@@ -1749,6 +1772,17 @@ section {
     padding-left: 1rem;
     font-size: 1.5rem;
   }
+  #services .section-title h2 {
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding-left:1rem;
+      line-height: 0.063rem;
+      margin: 0 0 0.313rem 0;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+      color: #aaaaaa;
+      font-family: "Poppins", sans-serif;
+    }
 }
 
 /* Very small screens */
