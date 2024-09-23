@@ -526,7 +526,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 2.5rem;
+  padding-bottom: 0rem;
   margin-bottom: 1.875rem;
 }
 
@@ -554,7 +554,7 @@ section {
 .section-title p {
   margin: 0;
   margin: 0;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -1369,6 +1369,9 @@ section {
   width: 100%;
   margin: 0 auto;
 } */
+ #container .section-title p{
+  font-size: 1.875rem;
+ }
 .bento-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1378,13 +1381,14 @@ section {
   margin: 0 auto;
   /* check padding later*/
   padding: 1.875rem;
+  padding-top: 0;
 }
 
 .bento-item {
   position: relative;
   background-color: #c2c2c2;
   border-radius: 0.5rem;
-  padding: 1.25rem;
+  padding:1.875rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1435,6 +1439,11 @@ section {
 .date-attach-flex {
   display: flex;
   align-content: center;
+}
+#container .section-title p{
+  padding-bottom: 0;
+  padding-top: 0;
+  font-size: 1.875rem;
 }
 
 /* Responsive styles */
@@ -1523,6 +1532,7 @@ section {
 #container .section-title p{
   padding-bottom: 0;
   padding-top: 0;
+  font-size: 1.875rem;
 }
 /* .workshop-bento {
   display: grid;
@@ -1676,7 +1686,6 @@ section {
 }
 
 #services .section-title h2 {
-  font-size: 0.875rem;
   font-weight: 500;
   padding-left: 5rem;
   line-height: 0.063rem;
@@ -1698,7 +1707,6 @@ section {
 
 #services .section-title p {
   margin: 0;
-  font-size: 2.25rem;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -1719,8 +1727,7 @@ section {
   }
 
   #services .section-title p {
-    padding-left: 2rem; /* Adjust padding for smaller screens */
-    font-size: 1.75rem; /* Reduce title font size */
+    padding-left: 2rem; /* Adjust padding for smaller screens */ /* Reduce title font size */
   }
 }
 
@@ -1771,6 +1778,7 @@ section {
   }
 
   #services .card {
+    padding-top: 0;
     min-width: 48%; /* Two cards side by side */
     height: auto; /* Let the card adapt its height */
     margin: 0 1%; /* Add a margin between cards */
@@ -1794,7 +1802,7 @@ section {
   }
 
   #services .card:hover .overlay {
-    height: 130%; /* Set overlay height to 130% on hover */
+    height: 100%; /* Set overlay height to 130% on hover */
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.9); /* Even stronger shadow on hover */
   }
 
@@ -1805,7 +1813,6 @@ section {
 
   #services .section-title p {
     padding-left: 1rem;
-    font-size: 1.5rem;
   }
   #services .section-title h2 {
       font-size: 0.875rem;
