@@ -1399,6 +1399,7 @@ section {
 .bento-item img {
   height: 30px;
   width: 30px;
+  color: #c2c2c2;
 }
 .bento-item:hover {
   box-shadow: 0 .0.5rem 0.1rem rgba(0, 0, 0, 0.3); 
@@ -1601,17 +1602,18 @@ section {
 #services .card .overlay h3 {
   color: #ddd;
   font-weight: 500;
-  margin-bottom: 0.313rem;
-  margin-top: 80%; /* Adjust margin */
+  margin-bottom: 5px;
+  margin-top: 90%; /* Adjust margin */
   font-family: "Open Sans", sans-serif;
   font-size: 1.875rem;
 }
 
 #services .card .overlay p {
   color: #c2c2c2;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.5;
   padding: 0.625rem;
+  padding-bottom: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   margin: 0;
@@ -1725,6 +1727,40 @@ section {
 /* Mobile view */
 /* Mobile view */
 @media (max-width: 48rem) {
+  #services .card .overlay h3 {
+    color: #ddd;
+    font-weight: 500;
+    margin-bottom: 0.125rem;
+    margin-top: 90%; /* Adjust margin */
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.875rem;
+  }
+  
+  #services .card .overlay p {
+    color: #c2c2c2;
+    font-size: 0.625rem;
+    line-height: 1.5;
+    padding: 0.625rem;
+    padding-bottom: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+    white-space: normal;
+  }
+  
+  #services .card .overlay a {
+    margin-top: 0.625rem;
+    color: #262626;
+    text-decoration: none;
+    font-size: 0.625rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 0.25rem 0.5rem; /* Smaller button */
+    margin-bottom: 0.5rem; /* Added bottom margin */
+    display: inline-block; /* Fit content */
+  }
+  
   #services{
     padding-top: 0;
     padding-bottom: 0;
