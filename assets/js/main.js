@@ -299,3 +299,6 @@
   });
 
 })()
+function sendEmail() {
+  window.location.href = "mailto:contact.ieeetcet@gmail.com,ieee.tcet@tcetmumbai.in";
+}
